@@ -25,7 +25,7 @@ POST_RESPONSE=$(curl \
   --location \
   --request POST \
   ${MATTERMOST_URL}/api/v4/files?channel_id=${CHANNEL_ID} \
-  --header "Authorization: Bearer ${PERSONAL_TOKEN}" --header "Content-Type: multipart/form-data" --form "files=@${1}")
+  --header "Authorization: Bearer ${PERSONAL_TOKEN}" --header "Content-Type: multipart/form-data" --form "files=@${FILENAME}")
 
 
 POST_RESPONSE=$(curl \
