@@ -35,4 +35,4 @@ POST_RESPONSE=$(curl \
   ${MATTERMOST_URL}/api/v4/posts \
   --header "Authorization: Bearer ${PERSONAL_TOKEN}" \
   --header "Content-Type: application/json" \
-  --data "{\"file_ids\":[\"$(echo $POST_RESPONSE | jq -r .[].[].id)\"],\"message\":\"${MESSAGE}\",\"channel_id\":\"${CHANNEL_ID}\"}")
+  --data "{\"file_ids\":[\"$(echo $POST_RESPONSE | jq -r .file_infos[].id)\"],\"message\":\"${MESSAGE}\",\"channel_id\":\"${CHANNEL_ID}\"}")
