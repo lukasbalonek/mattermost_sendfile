@@ -1,8 +1,6 @@
 <#
-.SYNOPSIS
-    .
 .DESCRIPTION
-    .
+    Powershell script to send file to Mattermost via API. Tested on PowerShell 5
 .PARAMETER FILENAME
     File to send.
 .PARAMETER MATTERMOST_URL
